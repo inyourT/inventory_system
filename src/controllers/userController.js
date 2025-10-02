@@ -1,5 +1,5 @@
 const prisma = require("../prismaClient");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt")
 
 // Get all user
 exports.getAllUser = async (req,res) => {
