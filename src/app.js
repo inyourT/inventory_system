@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const supplierRouters = require("./routes/supplierRoters")
 const userRouters = require("./routes/userRouters")
 const productRouters = require("./routes/productRouters")
+const transactionsRouters = require("./routes/transaksiRouters")
 
 const app = express();
 
@@ -18,6 +19,7 @@ const PORT = process.env.PORT
 app.use("/api/suppliers", supplierRouters);
 app.use("/api/users", userRouters);
 app.use("/api/products", productRouters);
+app.use("/api/transactions", transactionsRouters);
 
 
 app.get("/api", (req,res) => {
@@ -27,4 +29,4 @@ app.get("/api", (req,res) => {
 
 app.listen(PORT, () => {
     console.log(`Express API running in PORt: ${PORT}`)
-})
+});
